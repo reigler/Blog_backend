@@ -16,18 +16,10 @@
       "default": "Title",
       "required": true
     },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Title",
-      "required": true
-    },
-    "Content": {
-      "type": "blocks",
-      "required": true
-    },
-    "Description": {
-      "type": "text",
-      "required": true
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     },
     "Cover": {
       "type": "media",
@@ -39,10 +31,18 @@
         "audios"
       ]
     },
-    "categories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::category.category"
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": true
     }
   }
 }

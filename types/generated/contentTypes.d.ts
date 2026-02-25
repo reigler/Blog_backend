@@ -482,7 +482,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::category.category'
     >;
-    Content: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Content: Schema.Attribute.RichText & Schema.Attribute.Required;
     Cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
